@@ -4,12 +4,12 @@ const getMovie = (request, response) => {
      // Ensure there is a range given for the video
   const range = request.headers.range;
   if (!range) {
-    res.status(400).send("Requires Range header");
+    response.status(400).send("Requires Range header");
   }
 
   // get video stats (about 61MB)
-  const videoPath = "bigbuck.mp4";
-  const videoSize = fs.statSync("bigbuck.mp4").size;
+  const videoPath = "src/movie/bigbuck.mp4";
+  const videoSize = fs.statSync(videoPath).size;
 
   // Parse Range
   // Example: "bytes=32324-"
