@@ -8,7 +8,7 @@ const getMovie = (request, response) => {
   }
 
   // get video stats (about 61MB)
-  const videoPath = "src/movie/bigbuck.mp4";
+  const videoPath = "src/movie/Rashomon.mp4";
   const videoSize = fs.statSync(videoPath).size;
 
   // Parse Range
